@@ -4,20 +4,64 @@
              xmlns:local="clr-namespace:AppIMC"
              x:Class="AppIMC.MainPage">
 
-    <StackLayout>
+    <StackLayout Padding="5" 
+                 Orientation="Vertical"
+                 BackgroundColor="#999">
 
-        <Label Text="Qual é a sua altura?" />
-        <Entry x:Name="h" Keyboard="Numeric" />
+        <Label Text="CALCULE SEU ÍNDICE DE MASSA CORPORAL"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="White" />
 
-        <Label Text="Qual é o seu peso?" />
-        <Entry x:Name="peso" Keyboard="Numeric" />
+        <StackLayout BackgroundColor="#EEE" Padding="10">
 
-        <Button Text="Calcular" />
+            <Label Text="QUAL É SUA ALTURA?" 
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
 
-        <Label Text="Resultado: " />
+            <Entry x:Name="txt_altura" 
+                   Keyboard="Numeric" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="Red"
+                   FontAttributes="Bold" />
 
-        <Label Text="Até 13..." />
+            <Label Text="QUAL É SEU PESO?" 
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
 
+            <Entry x:Name="txt_peso" 
+                   Keyboard="Numeric"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Red"
+                   FontAttributes="Bold" />
+
+            <Button Text="Calcular" Clicked="Button_Clicked" />
+
+            <Label x:Name="resultado" 
+                   Text="Resultado: "
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   FontAttributes="Bold" />
+
+            <Label Text="VALORES DE REFERÊNCIA" 
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" 
+                   Margin="5" />
+
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell TextColor="#000" Text="Entre 17 e 18,49 = Abaixo do peso"></TextCell>
+                        <TextCell TextColor="#000" Text="Entre 18,5 e 24,99 = Peso normal"></TextCell>
+                        <TextCell TextColor="#000" Text="Entre 25 e 29,99 = Acima do peso"></TextCell>
+                        <TextCell TextColor="#000" Text="Entre 30 e 34,99 = Obesidade I"></TextCell>
+                        <TextCell TextColor="#000" Text="Entre 35 e 39,99 = Obesidade II (severa)"></TextCell>
+                        <TextCell TextColor="#000" Text="Acima de 40	Obesidade III (mórbida)"></TextCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>
