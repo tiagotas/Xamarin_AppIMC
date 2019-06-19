@@ -5,10 +5,19 @@
              x:Class="AppIMC.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+
+        <Label Text="Qual é a sua altura?" />
+        <Entry x:Name="h" Keyboard="Numeric" />
+
+        <Label Text="Qual é o seu peso?" />
+        <Entry x:Name="peso" Keyboard="Numeric" />
+
+        <Button Text="Calcular" />
+
+        <Label Text="Resultado: " />
+
+        <Label Text="Até 13..." />
+
     </StackLayout>
 
 </ContentPage>
