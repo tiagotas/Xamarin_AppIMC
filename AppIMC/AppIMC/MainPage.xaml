@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppIMC"
-             x:Class="AppIMC.MainPage">
+             x:Class="AppIMC.MainPage"
+             Title="ETEC APP IMC">
     
     <!-- Você já aprendeu sobre o StackLayout na Aula 2, AppCambio -->
     <StackLayout Padding="5" 
@@ -17,19 +18,18 @@
                FontAttributes="Bold"
                TextColor="White" />
 
-        <!-- 
-            Note que estamos utilizando o StatckLayout novamente, como o nome já sugere, 
-            é uma pilha de elementos, onde os elementos ficam empilhados, aqueles que são 
-            definidos primeiro ficam no topo e os que são defininos abaixo, ficam por baixo. 
-            Também estamos definindo alguns atributos: Padding (enchimento interno do layout), 
-            e o BackgroudColor que é a cor de fundo somente desta parte do App.
-        -->
+        <!-- Note que estamos utilizando o StatckLayout novamente, como o nome já sugere, 
+             é uma pilha de elementos, onde os elementos ficam empilhados, aqueles que são 
+             definidos primeiro ficam no topo e os que são defininos abaixo, ficam por baixo. 
+             Também estamos definindo alguns atributos: Padding (enchimento interno do layout), 
+             e o BackgroudColor que é a cor de fundo somente desta parte do App. -->
         <StackLayout BackgroundColor="#EEE" Padding="10">
 
             <Label Text="QUAL É SUA ALTURA?" 
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center" />
 
+            <!-- Você já aprendeu sobre o Entry na Aula 2, AppCambio -->
             <Entry x:Name="txt_altura" 
                    Keyboard="Numeric" 
                    HorizontalTextAlignment="Center"
@@ -46,6 +46,7 @@
                    TextColor="Red"
                    FontAttributes="Bold" />
 
+            <!-- Você já aprendeu sobre o Button e o atributo Clicked na Aula 2, AppCambio -->
             <Button Text="Calcular" Clicked="Button_Clicked" />
 
             <Label x:Name="resultado" 
@@ -59,12 +60,10 @@
                    FontAttributes="Bold" 
                    Margin="5" />
 
-            <!-- 
-                Aqui estamos utilizando o componente TableView para mostrar uma lista de valores
-                de referência para o usuário, no App pronto vc notará que é uma lista rolável, ou seja,
-                poderá ter muitos valores. Geralmente este componente não é usado para este fim, mas foi
-                um bom reaproveitamento neste caso. Falaremos mais sobre ele na disciplina.
-            -->
+            <!-- Aqui estamos utilizando o componente TableView para mostrar uma lista de valores
+                 de referência para o usuário, no App pronto vc notará que é uma lista rolável, ou seja,
+                 poderá ter muitos valores. Geralmente este componente não é usado para este fim, mas foi
+                 um bom reaproveitamento neste caso. Falaremos mais sobre ele na disciplina. -->
             <TableView>
                 <TableRoot>
                     <TableSection>
